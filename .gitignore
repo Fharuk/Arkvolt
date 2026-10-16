@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build output
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment — never commit real credentials
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Local image fallback (development only; production uses Cloudinary)
+apps/api/uploads/*
+!apps/api/uploads/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# Editors and OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test and coverage
+coverage/
+.nyc_output/
+
+# Misc
+.turbo/
+.cache/
+.vercel/
