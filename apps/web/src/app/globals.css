@@ -1,0 +1,400 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==================================================================
+   ARKVOLT — foundation
+   The house style in one place: surfaces, hairlines, technical type,
+   and the small number of recurring motifs that make the site read as
+   engineered rather than decorated.
+   ================================================================== */
+
+@layer base {
+  :root {
+    /* Consumed by the noise overlay and the scan sweep. */
+    --noise-opacity: 0.028;
+    --shell-x: clamp(1.25rem, 4.5vw, 5rem);
+  }
+
+  * {
+    @apply border-hairline;
+  }
+
+  html {
+    /* Firefox */
+    scrollbar-color: #2a2e37 #0d0e12;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html,
+  body {
+    @apply bg-void text-chalk antialiased;
+  }
+
+  body {
+    @apply font-sans;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'cv11' 1;
+    /* Headline overflow must never produce a horizontal scrollbar. */
+    overflow-x: clip;
+  }
+
+  ::selection {
+    @apply bg-volt text-void;
+  }
+
+  /* Thin, dark, unobtrusive. Visible on hover only where it needs to be. */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d0e12;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2e37;
+    border: 3px solid #0d0e12;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3f4a;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-semibold uppercase;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Numbers that line up in tables, specs and prices. Non-negotiable. */
+  .tnum,
+  table,
+  [data-numeric] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Visible, sharp focus ring — the accent doing real work. */
+  :focus-visible {
+    outline: 2px solid #00d4ff;
+    outline-offset: 2px;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply bg-transparent;
+    font-variant-numeric: tabular-nums;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-slate;
+  }
+
+  /* Kill the browser's autofill yellow — it destroys a dark UI. */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #f2f4f7;
+    -webkit-box-shadow: 0 0 0 1000px #14161b inset;
+    transition: background-color 9999s ease-in-out 0s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* ---------------------------------------------------------------- *
+   * Layout
+   * ---------------------------------------------------------------- */
+
+  .shell {
+    width: 100%;
+    max-width: 1480px;
+    margin-inline: auto;
+    padding-inline: var(--shell-x);
+  }
+
+  .shell-tight {
+    width: 100%;
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: var(--shell-x);
+  }
+
+  /* ---------------------------------------------------------------- *
+   * Technical type — the third layer that makes this read engineered
+   * ---------------------------------------------------------------- */
+
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-technical text-volt;
+  }
+
+  .eyebrow-muted {
+    @apply font-mono text-[11px] uppercase tracking-technical text-slate;
+  }
+
+  .label-tech {
+    @apply font-mono text-[10px] uppercase tracking-technical text-slate;
+  }
+
+  /* Section index numerals: 01 / 02 / 03 */
+  .index-num {
+    @apply font-mono text-[11px] tabular-nums text-volt/70;
+  }
+
+  /* ---------------------------------------------------------------- *
+   * Frames and hairlines
+   * ---------------------------------------------------------------- */
+
+  .hairline-t {
+    @apply border-t border-hairline;
+  }
+  .hairline-b {
+    @apply border-b border-hairline;
+  }
+  .hairline-l {
+    @apply border-l border-hairline;
+  }
+  .hairline-r {
+    @apply border-r border-hairline;
+  }
+
+  /* The signature motif: technical-drawing corner brackets. Applied to
+     framed media and feature panels. Two pseudo-elements, four corners. */
+  .bracket {
+    position: relative;
+  }
+  .bracket::before,
+  .bracket::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+    opacity: 0.55;
+    transition: opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .bracket::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1px solid #00d4ff;
+    border-left: 1px solid #00d4ff;
+  }
+  .bracket::after {
+    right: -1px;
+    bottom: -1px;
+    border-right: 1px solid #00d4ff;
+    border-bottom: 1px solid #00d4ff;
+  }
+  .bracket:hover::before,
+  .bracket:hover::after {
+    opacity: 1;
+  }
+
+  .bracket-lg::before,
+  .bracket-lg::after {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* ---------------------------------------------------------------- *
+   * Surfaces
+   * ---------------------------------------------------------------- */
+
+  .panel {
+    @apply border border-hairline bg-gunmetal;
+  }
+
+  .panel-raised {
+    @apply border border-hairline bg-plate;
+  }
+
+  /* A very faint grid, drawn behind hero and dark sections. */
+  .grid-field {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  /* Fine film grain. Reference: printed spec sheets. Not a "cool texture". */
+  .noise::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: var(--noise-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------------------------------------------------------------- *
+   * Controls
+   * ---------------------------------------------------------------- */
+
+  .btn {
+    @apply inline-flex select-none items-center justify-center gap-2.5 whitespace-nowrap border px-6 py-3.5 font-mono text-[11px] uppercase tracking-technical transition-all duration-200 ease-mechanical disabled:pointer-events-none disabled:opacity-40;
+  }
+
+  .btn-primary {
+    @apply btn border-volt bg-volt text-void hover:bg-transparent hover:text-volt;
+  }
+
+  .btn-ghost {
+    @apply btn border-hairline-strong text-chalk hover:border-volt hover:text-volt;
+  }
+
+  .btn-quiet {
+    @apply btn border-transparent text-steel hover:border-hairline-strong hover:text-chalk;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2.5 text-[10px];
+  }
+
+  .field {
+    @apply w-full border border-hairline bg-plate px-4 py-3 text-[15px] text-chalk transition-colors duration-200 ease-mechanical focus:border-volt focus:outline-none;
+  }
+
+  .field-label {
+    @apply mb-2 block font-mono text-[10px] uppercase tracking-technical text-steel;
+  }
+
+  .field-error {
+    @apply mt-1.5 font-mono text-[10px] uppercase tracking-technical text-crimson;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 border border-hairline-strong px-2.5 py-1 font-mono text-[10px] uppercase tracking-technical text-steel;
+  }
+
+  .chip-volt {
+    @apply chip border-volt/40 text-volt;
+  }
+
+  /* ---------------------------------------------------------------- *
+   * Links
+   * ---------------------------------------------------------------- */
+
+  /* Underline grows from the left on hover. No colour-only affordance. */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* ---------------------------------------------------------------- *
+   * Data display
+   * ---------------------------------------------------------------- */
+
+  /* Spec tables — the datasheet pattern used across product and service pages. */
+  .spec-table {
+    @apply w-full border-collapse text-[14px];
+  }
+  .spec-table tr {
+    @apply border-b border-hairline;
+  }
+  .spec-table tr:last-child {
+    @apply border-b-0;
+  }
+  .spec-table th {
+    @apply w-[42%] py-3 pr-4 text-left align-top font-mono text-[10px] font-normal uppercase tracking-technical text-slate;
+  }
+  .spec-table td {
+    @apply py-3 text-left align-top text-chalk;
+  }
+
+  .stat-value {
+    @apply font-display text-d-sm font-semibold tabular-nums text-chalk;
+  }
+
+  /* ---------------------------------------------------------------- *
+   * Scrollbar-free horizontal rails
+   * ---------------------------------------------------------------- */
+
+  .rail {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .rail::-webkit-scrollbar {
+    display: none;
+  }
+  .rail > * {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  /* ---------------------------------------------------------------- *
+   * Skeleton loading — a sweep, not a shimmer
+   * ---------------------------------------------------------------- */
+
+  .skeleton {
+    @apply relative overflow-hidden bg-plate;
+  }
+  .skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.04), transparent);
+    animation: scan-sweep 1.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@layer utilities {
+  /* Tight display tracking, applied after the font-size utilities so it wins. */
+  .tracking-display {
+    letter-spacing: -0.03em;
+  }
+
+  /* Hollow display type — a second weight of headline, useful in lists. */
+  .type-hollow {
+    color: transparent;
+    -webkit-text-stroke: 1px #3a3f4a;
+  }
+
+  .mask-fade-r {
+    mask-image: linear-gradient(to right, black 78%, transparent 100%);
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

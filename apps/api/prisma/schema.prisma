@@ -1,0 +1,488 @@
+// ARKVOLT — PostgreSQL schema
+// Conventions:
+//   * All money is stored in kobo (Int) — never Float, never naira.
+//   * Every table carries createdAt/updatedAt so the audit log can reason about time.
+//   * Content blocks (specs, install steps, requirements) are Json: they are
+//     authored as a whole in the dashboard and read as a whole on the storefront.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Auth
+
+model AdminUser {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  name         String
+  passwordHash String
+  lastLoginAt  DateTime?
+  lastLoginIp  String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  auditLogs AuditLog[]
+
+  @@map("admin_users")
+}
+
+// Catalogue
+
+model Category {
+  id          String      @id @default(cuid())
+  name        String
+  slug        String      @unique
+  kind        ProductKind
+  description String      @default("")
+  sortOrder   Int         @default(0)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  products Product[]
+
+  @@index([kind, sortOrder])
+  @@map("categories")
+}
+
+model Product {
+  id               String        @id @default(cuid())
+  slug             String        @unique
+  name             String
+  sku              String        @unique
+  kind             ProductKind
+  status           ProductStatus @default(DRAFT)
+
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  tagline          String @default("")
+  shortDescription String @default("")
+  description      String @default("")
+
+  priceKobo      Int
+  compareAtKobo  Int?
+  priceType      PriceType @default(FIXED)
+
+  stock      Int     @default(0)
+  trackStock Boolean @default(true)
+
+  isFeatured Boolean @default(false)
+  sortOrder  Int     @default(0)
+
+  images       Json @default("[]")
+  specs        Json @default("[]")
+  requirements Json @default("[]")
+  installSteps Json @default("[]")
+  included     Json @default("[]")
+  tags         Json @default("[]")
+
+  deliveryNotes String @default("")
+
+  metaTitle       String @default("")
+  metaDescription String @default("")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  orderItems OrderItem[]
+
+  @@index([status, kind, sortOrder])
+  @@index([categoryId])
+  @@map("products")
+}
+
+model Service {
+  id               String        @id @default(cuid())
+  slug             String        @unique
+  name             String
+  tagline          String        @default("")
+  shortDescription String        @default("")
+  description      String        @default("")
+
+  priceKobo Int
+  priceType PriceType @default(FROM)
+
+  durationMins Int?
+  turnaround   String  @default("")
+
+  includes Json @default("[]")
+  process  Json @default("[]")
+  faqs     Json @default("[]")
+  images   Json @default("[]")
+
+  status     ProductStatus @default(ACTIVE)
+  isFeatured Boolean       @default(false)
+  sortOrder  Int           @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  bookings RepairBooking[]
+
+  @@index([status, sortOrder])
+  @@map("services")
+}
+
+// Reference index of titles a customer may ask us to set up on their machine.
+// Names and metadata only — no distribution artefacts, mirrors or keys.
+// This is deliberately a separate table from Product: it is never purchasable.
+model TitleEntry {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  name      String
+  series    String?
+  genre     Genre
+  platforms Json     @default("[]")
+  createdAt DateTime @default(now())
+
+  requests TitleRequest[]
+
+  @@index([genre])
+  @@map("title_entries")
+}
+
+// Orders
+
+model Order {
+  id  String @id @default(cuid())
+  ref String @unique
+
+  customerName String
+  phone        String
+  email        String?
+  address      String?
+  city         String?
+  state        String?
+
+  fulfilment    FulfilmentMode
+  status        OrderStatus    @default(NEW)
+  paymentMethod PaymentMethod  @default(WHATSAPP_TRANSFER)
+  paymentStatus PaymentStatus  @default(UNPAID)
+
+  subtotalKobo Int
+  deliveryFeeKobo Int @default(0)
+  discountKobo    Int @default(0)
+  totalKobo       Int
+
+  notes         String?
+  internalNotes String?
+
+  whatsappSentAt DateTime?
+  idempotencyKey String    @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  items OrderItem[]
+
+  @@index([status, createdAt])
+  @@index([phone])
+  @@map("orders")
+}
+
+// Price, SKU and name are snapshotted at checkout. Editing a product later
+// must never rewrite the history of an order that has already been placed.
+model OrderItem {
+  id     String @id @default(cuid())
+  orderId String
+  order   Order  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  productId String?
+  product   Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+
+  nameSnapshot  String
+  skuSnapshot   String
+  slugSnapshot  String?
+  unitPriceKobo Int
+  quantity      Int
+  lineTotalKobo Int
+
+  @@index([orderId])
+  @@map("order_items")
+}
+
+// Front desk: repairs, inquiries, title requests
+
+model RepairBooking {
+  id  String @id @default(cuid())
+  ref String @unique
+
+  customerName String
+  phone        String
+  email        String?
+
+  serviceMode ServiceMode
+  address     String?
+  city        String?
+  state       String?
+
+  deviceCategory   DeviceCategory
+  deviceBrand      String
+  deviceModel      String
+  issueCategory    IssueCategory
+  issueDescription String
+  urgency          Urgency @default(STANDARD)
+
+  preferredDate String?
+  preferredSlot String?
+
+  serviceId String?
+  service   Service? @relation(fields: [serviceId], references: [id], onDelete: SetNull)
+
+  estimatedKobo Int?
+  status        BookingStatus @default(NEW)
+  technician    String?
+  internalNotes String?
+
+  idempotencyKey String @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status, createdAt])
+  @@index([phone])
+  @@map("repair_bookings")
+}
+
+model Inquiry {
+  id String @id @default(cuid())
+  ref String @unique
+
+  name    String
+  phone   String
+  email   String?
+  subject String
+  message String
+
+  source      InquirySource @default(CONTACT)
+  relatedSlug String?
+  status      InquiryStatus @default(NEW)
+  handledAt   DateTime?
+
+  idempotencyKey String @unique
+
+  createdAt DateTime @default(now())
+
+  @@index([status, createdAt])
+  @@map("inquiries")
+}
+
+model TitleRequest {
+  id  String @id @default(cuid())
+  ref String @unique
+
+  titleName   String
+  titleSlug   String?
+  platform    String
+  deviceSpecs String?
+
+  customerName String
+  phone        String
+  email        String?
+  city         String?
+  notes        String?
+
+  status BookingStatus @default(NEW)
+
+  idempotencyKey String @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  titleEntryId String?
+  titleEntry   TitleEntry? @relation(fields: [titleEntryId], references: [id], onDelete: SetNull)
+
+  @@index([status, createdAt])
+  @@map("title_requests")
+}
+
+// Ops
+
+model AuditLog {
+  id     String @id @default(cuid())
+  userId String?
+  user   AdminUser? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  actorEmail String
+  actorName  String
+
+  action   AuditAction
+  entity   String
+  entityId String?
+  summary  String
+  diff     Json?
+
+  ip        String?
+  userAgent String?
+
+  createdAt DateTime @default(now())
+
+  @@index([entity, createdAt])
+  @@index([createdAt])
+  @@index([action])
+  @@map("audit_logs")
+}
+
+model Setting {
+  id     String @id @default("singleton")
+  data   Json
+  updatedAt DateTime @updatedAt
+
+  @@map("settings")
+}
+
+// Enums
+
+enum ProductKind {
+  SOFTWARE
+  HARDWARE
+  PART
+  SERVICE
+}
+
+enum ProductStatus {
+  DRAFT
+  ACTIVE
+  ARCHIVED
+}
+
+enum PriceType {
+  FIXED
+  FROM
+  QUOTE
+}
+
+enum FulfilmentMode {
+  PICKUP
+  DELIVERY
+  ONSITE
+  REMOTE
+}
+
+enum OrderStatus {
+  NEW
+  CONFIRMED
+  PREPARING
+  READY
+  COMPLETED
+  CANCELLED
+}
+
+enum PaymentMethod {
+  WHATSAPP_TRANSFER
+  BANK_TRANSFER
+  CASH_ON_DELIVERY
+}
+
+enum PaymentStatus {
+  UNPAID
+  AWAITING_CONFIRMATION
+  PAID
+  REFUNDED
+}
+
+enum BookingStatus {
+  NEW
+  CONTACTED
+  SCHEDULED
+  IN_PROGRESS
+  AWAITING_PARTS
+  COMPLETED
+  CANCELLED
+}
+
+enum ServiceMode {
+  DROP_OFF
+  ONSITE
+  REMOTE
+  COURIER
+}
+
+enum Urgency {
+  STANDARD
+  PRIORITY
+  EMERGENCY
+}
+
+enum DeviceCategory {
+  LAPTOP
+  DESKTOP
+  ALL_IN_ONE
+  CONSOLE
+  PRINTER
+  PHONE
+  TABLET
+  SERVER
+  NETWORKING
+  OTHER
+}
+
+enum IssueCategory {
+  WONT_BOOT
+  OVERHEATING
+  SLOW_PERFORMANCE
+  BLUE_SCREEN
+  DATA_RECOVERY
+  SCREEN_DAMAGE
+  KEYBOARD_TRACKPAD
+  BATTERY_POWER
+  OS_CORRUPTION
+  VIRUS_MALWARE
+  STORAGE_UPGRADE
+  RAM_UPGRADE
+  CONNECTIVITY
+  WATER_DAMAGE
+  OTHER
+}
+
+enum InquirySource {
+  CONTACT
+  PRODUCT
+  SERVICE
+  TITLE_REQUEST
+  FOOTER
+}
+
+enum InquiryStatus {
+  NEW
+  READ
+  REPLIED
+  CLOSED
+  SPAM
+}
+
+enum Genre {
+  ACTION
+  OPEN_WORLD
+  SPORTS
+  RACING
+  SHOOTER
+  FIGHTING
+  HORROR
+  RPG
+  ADVENTURE
+  STRATEGY
+  FAMILY
+  SIMULATION
+}
+
+enum AuditAction {
+  LOGIN
+  LOGIN_FAILED
+  LOGOUT
+  CREATE
+  UPDATE
+  DELETE
+  STATUS_CHANGE
+  PUBLISH
+  UNPUBLISH
+  UPLOAD
+  SETTINGS_UPDATE
+  PASSWORD_CHANGE
+  EXPORT
+}

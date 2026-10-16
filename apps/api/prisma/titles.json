@@ -1,0 +1,1136 @@
+[
+ {
+  "name": "Assassin's Creed Director's Cut",
+  "slug": "assassin-s-creed-director-s-cut",
+  "series": "Assassin's Creed",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Assassin's Creed II",
+  "slug": "assassin-s-creed-ii",
+  "series": "Assassin's Creed",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Assassin's Creed III Remastered",
+  "slug": "assassin-s-creed-iii-remastered",
+  "series": "Assassin's Creed",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Assassin's Creed IV: Black Flag",
+  "slug": "assassin-s-creed-iv-black-flag",
+  "series": "Assassin's Creed",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Assassin's Creed Liberation",
+  "slug": "assassin-s-creed-liberation",
+  "series": "Assassin's Creed",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Assassin's Creed Mirage",
+  "slug": "assassin-s-creed-mirage",
+  "series": "Assassin's Creed",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Assassin's Creed Odyssey",
+  "slug": "assassin-s-creed-odyssey",
+  "series": "Assassin's Creed",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Assassin's Creed Revelations",
+  "slug": "assassin-s-creed-revelations",
+  "series": "Assassin's Creed",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Assassin's Creed Syndicate",
+  "slug": "assassin-s-creed-syndicate",
+  "series": "Assassin's Creed",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Assassin's Creed Unity Gold Edition",
+  "slug": "assassin-s-creed-unity-gold-edition",
+  "series": "Assassin's Creed",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Assassin's Creed Valhalla",
+  "slug": "assassin-s-creed-valhalla",
+  "series": "Assassin's Creed",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Batman: Arkham Knight",
+  "slug": "batman-arkham-knight",
+  "series": "Batman: Arkham",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Batman: The Enemy Within",
+  "slug": "batman-the-enemy-within",
+  "series": "Batman: Arkham",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Batman: The Telltale Series",
+  "slug": "batman-the-telltale-series",
+  "series": "Batman: Arkham",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Battlefield 1",
+  "slug": "battlefield-1",
+  "series": "Battlefield",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Battlefield 2",
+  "slug": "battlefield-2",
+  "series": "Battlefield",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Battlefield 3",
+  "slug": "battlefield-3",
+  "series": "Battlefield",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Battlefield 4",
+  "slug": "battlefield-4",
+  "series": "Battlefield",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Battlefield V",
+  "slug": "battlefield-v",
+  "series": "Battlefield",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Battlefield: Bad Company 2",
+  "slug": "battlefield-bad-company-2",
+  "series": "Battlefield",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "BioShock Remastered",
+  "slug": "bioshock-remastered",
+  "series": "BioShock",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Biomutant",
+  "slug": "biomutant",
+  "series": null,
+  "genre": "RPG",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Blur",
+  "slug": "blur",
+  "series": null,
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Call of Duty 4: Modern Warfare",
+  "slug": "call-of-duty-4-modern-warfare",
+  "series": "Call of Duty",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Call of Duty: Black Ops",
+  "slug": "call-of-duty-black-ops",
+  "series": "Call of Duty",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Call of Duty: Black Ops II",
+  "slug": "call-of-duty-black-ops-ii",
+  "series": "Call of Duty",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Call of Duty: Ghosts",
+  "slug": "call-of-duty-ghosts",
+  "series": "Call of Duty",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Castlevania: Lords of Shadow",
+  "slug": "castlevania-lords-of-shadow",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Control",
+  "slug": "control",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Crysis 3",
+  "slug": "crysis-3",
+  "series": "Crysis",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Cyberpunk 2077",
+  "slug": "cyberpunk-2077",
+  "series": null,
+  "genre": "RPG",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Days Gone",
+  "slug": "days-gone",
+  "series": null,
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Dead Space 3",
+  "slug": "dead-space-3",
+  "series": "Dead Space",
+  "genre": "HORROR",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Deadpool",
+  "slug": "deadpool",
+  "series": "Deadpool",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Detroit: Become Human",
+  "slug": "detroit-become-human",
+  "series": null,
+  "genre": "ADVENTURE",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Devil May Cry 3",
+  "slug": "devil-may-cry-3",
+  "series": "Devil May Cry",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Devil May Cry 4",
+  "slug": "devil-may-cry-4",
+  "series": "Devil May Cry",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "DiRT 3: Complete Edition",
+  "slug": "dirt-3-complete-edition",
+  "series": "DiRT",
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "DiRT Showdown",
+  "slug": "dirt-showdown",
+  "series": "DiRT",
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Dragon Ball: Sparking! ZERO",
+  "slug": "dragon-ball-sparking-zero",
+  "series": null,
+  "genre": "FIGHTING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Euro Truck Simulator 2",
+  "slug": "euro-truck-simulator-2",
+  "series": null,
+  "genre": "SIMULATION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "FIFA 12",
+  "slug": "fifa-12",
+  "series": "EA Sports FC / FIFA",
+  "genre": "SPORTS",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "FIFA 15",
+  "slug": "fifa-15",
+  "series": "EA Sports FC / FIFA",
+  "genre": "SPORTS",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "FIFA 19",
+  "slug": "fifa-19",
+  "series": "EA Sports FC / FIFA",
+  "genre": "SPORTS",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "FIFA 23",
+  "slug": "fifa-23",
+  "series": "EA Sports FC / FIFA",
+  "genre": "SPORTS",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Far Cry 2: Fortune's Edition",
+  "slug": "far-cry-2-fortune-s-edition",
+  "series": "Far Cry",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Far Cry 3",
+  "slug": "far-cry-3",
+  "series": "Far Cry",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Far Cry 4: Gold Edition",
+  "slug": "far-cry-4-gold-edition",
+  "series": "Far Cry",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Far Cry 6",
+  "slug": "far-cry-6",
+  "series": "Far Cry",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Far Cry New Dawn",
+  "slug": "far-cry-new-dawn",
+  "series": "Far Cry",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Far Cry Primal",
+  "slug": "far-cry-primal",
+  "series": "Far Cry",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Football Manager 2021",
+  "slug": "football-manager-2021",
+  "series": null,
+  "genre": "SIMULATION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Forza Horizon 3",
+  "slug": "forza-horizon-3",
+  "series": null,
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Gears 5",
+  "slug": "gears-5",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Ghost of Tsushima",
+  "slug": "ghost-of-tsushima",
+  "series": null,
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "God of War",
+  "slug": "god-of-war",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Gotham Knights",
+  "slug": "gotham-knights",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Grand Theft Auto IV",
+  "slug": "grand-theft-auto-iv",
+  "series": "Grand Theft Auto",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Grand Theft Auto V",
+  "slug": "grand-theft-auto-v",
+  "series": "Grand Theft Auto",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Grand Theft Auto: San Andreas",
+  "slug": "grand-theft-auto-san-andreas",
+  "series": "Grand Theft Auto",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Grand Theft Auto: Vice City",
+  "slug": "grand-theft-auto-vice-city",
+  "series": "Grand Theft Auto",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Hellblade: Senua's Sacrifice",
+  "slug": "hellblade-senua-s-sacrifice",
+  "series": null,
+  "genre": "ADVENTURE",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Hitman: Absolution",
+  "slug": "hitman-absolution",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Horizon Zero Dawn",
+  "slug": "horizon-zero-dawn",
+  "series": null,
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Injustice 2",
+  "slug": "injustice-2",
+  "series": "Injustice",
+  "genre": "FIGHTING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Injustice: Gods Among Us",
+  "slug": "injustice-gods-among-us",
+  "series": "Injustice",
+  "genre": "FIGHTING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Insane 2",
+  "slug": "insane-2",
+  "series": null,
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Inversion",
+  "slug": "inversion",
+  "series": null,
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Just Cause 2",
+  "slug": "just-cause-2",
+  "series": "Just Cause",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Just Cause 3: XL Edition",
+  "slug": "just-cause-3-xl-edition",
+  "series": "Just Cause",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "L.A. Noire",
+  "slug": "l-a-noire",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "LEGO DC Super-Villains",
+  "slug": "lego-dc-super-villains",
+  "series": "LEGO",
+  "genre": "FAMILY",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "LEGO Marvel Super Heroes 2",
+  "slug": "lego-marvel-super-heroes-2",
+  "series": "LEGO",
+  "genre": "FAMILY",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "LEGO Star Wars: The Skywalker Saga",
+  "slug": "lego-star-wars-the-skywalker-saga",
+  "series": "LEGO",
+  "genre": "FAMILY",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "LEGO The Lord of the Rings",
+  "slug": "lego-the-lord-of-the-rings",
+  "series": "LEGO",
+  "genre": "FAMILY",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Mad Max",
+  "slug": "mad-max",
+  "series": null,
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Mafia III: Definitive Edition",
+  "slug": "mafia-iii-definitive-edition",
+  "series": "Mafia",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Mafia: Definitive Edition",
+  "slug": "mafia-definitive-edition",
+  "series": "Mafia",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Marvel's Avengers",
+  "slug": "marvel-s-avengers",
+  "series": "Marvel",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Marvel's Spider-Man Remastered",
+  "slug": "marvel-s-spider-man-remastered",
+  "series": "Marvel",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Max Payne",
+  "slug": "max-payne",
+  "series": "Max Payne",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Medal of Honor",
+  "slug": "medal-of-honor",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Metal Gear Solid",
+  "slug": "metal-gear-solid",
+  "series": "Metal Gear Solid",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Metal Gear Solid V: The Phantom Pain",
+  "slug": "metal-gear-solid-v-the-phantom-pain",
+  "series": "Metal Gear Solid",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Naruto Shippuden: Ultimate Ninja Storm 4",
+  "slug": "naruto-shippuden-ultimate-ninja-storm-4",
+  "series": "Naruto",
+  "genre": "FIGHTING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Naruto x Boruto: Ultimate Ninja Storm Connections",
+  "slug": "naruto-x-boruto-ultimate-ninja-storm-connections",
+  "series": "Naruto",
+  "genre": "FIGHTING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Need for Speed Heat",
+  "slug": "need-for-speed-heat",
+  "series": "Need for Speed",
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Need for Speed Payback",
+  "slug": "need-for-speed-payback",
+  "series": "Need for Speed",
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Need for Speed Rivals",
+  "slug": "need-for-speed-rivals",
+  "series": "Need for Speed",
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Need for Speed: Most Wanted (2005)",
+  "slug": "need-for-speed-most-wanted-2005",
+  "series": "Need for Speed",
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Need for Speed: Most Wanted (2012)",
+  "slug": "need-for-speed-most-wanted-2012",
+  "series": "Need for Speed",
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Pro Evolution Soccer 2015",
+  "slug": "pro-evolution-soccer-2015",
+  "series": "Pro Evolution Soccer",
+  "genre": "SPORTS",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Pro Evolution Soccer 2018",
+  "slug": "pro-evolution-soccer-2018",
+  "series": "Pro Evolution Soccer",
+  "genre": "SPORTS",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Red Dead Redemption",
+  "slug": "red-dead-redemption",
+  "series": "Red Dead Redemption",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Red Dead Redemption 2",
+  "slug": "red-dead-redemption-2",
+  "series": "Red Dead Redemption",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Resident Evil 3",
+  "slug": "resident-evil-3",
+  "series": "Resident Evil",
+  "genre": "HORROR",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Resident Evil Village",
+  "slug": "resident-evil-village",
+  "series": "Resident Evil",
+  "genre": "HORROR",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Ryse: Son of Rome",
+  "slug": "ryse-son-of-rome",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Saints Row IV",
+  "slug": "saints-row-iv",
+  "series": "Saints Row",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Saints Row: Gat out of Hell",
+  "slug": "saints-row-gat-out-of-hell",
+  "series": "Saints Row",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Saints Row: The Third Remastered",
+  "slug": "saints-row-the-third-remastered",
+  "series": "Saints Row",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Shadow of the Tomb Raider",
+  "slug": "shadow-of-the-tomb-raider",
+  "series": "Tomb Raider",
+  "genre": "ADVENTURE",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Sifu",
+  "slug": "sifu",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Sleeping Dogs: Definitive Edition",
+  "slug": "sleeping-dogs-definitive-edition",
+  "series": null,
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Sniper: Ghost Warrior Contracts 2",
+  "slug": "sniper-ghost-warrior-contracts-2",
+  "series": "Sniper: Ghost Warrior",
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Sonic & All-Stars Racing Transformed",
+  "slug": "sonic-all-stars-racing-transformed",
+  "series": null,
+  "genre": "FAMILY",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Spider-Man: Shattered Dimensions",
+  "slug": "spider-man-shattered-dimensions",
+  "series": "Marvel's Spider-Man",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Spider-Man: Web of Shadows",
+  "slug": "spider-man-web-of-shadows",
+  "series": "Marvel's Spider-Man",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Split/Second",
+  "slug": "split-second",
+  "series": null,
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Tekken 6",
+  "slug": "tekken-6",
+  "series": "Tekken",
+  "genre": "FIGHTING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "The Evil Within",
+  "slug": "the-evil-within",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "The Last of Us",
+  "slug": "the-last-of-us",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "The Walking Dead: A New Frontier",
+  "slug": "the-walking-dead-a-new-frontier",
+  "series": "The Walking Dead",
+  "genre": "ADVENTURE",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "The Wolf Among Us",
+  "slug": "the-wolf-among-us",
+  "series": null,
+  "genre": "ADVENTURE",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Titanfall 2",
+  "slug": "titanfall-2",
+  "series": null,
+  "genre": "SHOOTER",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Tom Clancy's Ghost Recon: Wildlands",
+  "slug": "tom-clancy-s-ghost-recon-wildlands",
+  "series": "Tom Clancy's",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Tom Clancy's Splinter Cell: Conviction",
+  "slug": "tom-clancy-s-splinter-cell-conviction",
+  "series": "Tom Clancy's",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Tomb Raider (2013)",
+  "slug": "tomb-raider-2013",
+  "series": "Tomb Raider",
+  "genre": "ADVENTURE",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Ultimate Marvel vs. Capcom 3",
+  "slug": "ultimate-marvel-vs-capcom-3",
+  "series": "Marvel",
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Wanted",
+  "slug": "wanted",
+  "series": null,
+  "genre": "ACTION",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Watch Dogs 2",
+  "slug": "watch-dogs-2",
+  "series": "Watch Dogs",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Watch Dogs: Legion",
+  "slug": "watch-dogs-legion",
+  "series": "Watch Dogs",
+  "genre": "OPEN_WORLD",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Wonderland: Secret Worlds",
+  "slug": "wonderland-secret-worlds",
+  "series": null,
+  "genre": "FAMILY",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "Xpand Rally Xtreme",
+  "slug": "xpand-rally-xtreme",
+  "series": null,
+  "genre": "RACING",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "eFootball 2022",
+  "slug": "efootball-2022",
+  "series": "eFootball",
+  "genre": "SPORTS",
+  "platforms": [
+   "PC"
+  ]
+ },
+ {
+  "name": "eFootball PES 2021",
+  "slug": "efootball-pes-2021",
+  "series": "eFootball",
+  "genre": "SPORTS",
+  "platforms": [
+   "PC"
+  ]
+ }
+]
